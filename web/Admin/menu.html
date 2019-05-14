@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>menu</title>
+    <link rel="stylesheet" href="skin/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="skin/css/menu.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+    <script language='javascript'>var curopenItem = '1';</script>
+
+    <script language="javascript" type="text/javascript" src="skin/js/frame/menu.js"></script>
+
+    <base target="main" />
+</head>
+<body target="main">
+    <table width='99%' height="100%" border='0' cellspacing='0' cellpadding='0'>
+        <tr>
+            <td style="padding-left: 3px; padding-top: 8px; height: 717px;" valign="top">
+                <!-- Item 1 Strat -->
+                <dl class='bitem'>
+                    <dt onclick='showHide("items1_1")'>管理员管理</dt>
+                    <dd style='display: block' class='sitem' id='items1_1'>
+                        <ul class='sitemu'>
+                            <li>
+                                <div class='items'>
+                                    <div class='fllct'>
+                                        <a href='AdminList.aspx' target='main'>账号管理</a></div>
+                                </div>
+                            </li>
+                            <li><a href='AddAdmin.aspx' target='main'>添加账号</a> </li>
+                            <li>
+                                <div class='items'>
+                                    <div class='fllct'>
+                                        <a href='ModifyPwd.aspx' target='main'>修改密码</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <!-- Item 1 End -->
+                <!-- Item 2 Strat -->
+                <dl class='bitem'>
+                    <dt onclick='showHide("items2_1")'>系统信息维护管理</dt>
+                    <dd style='display: block' class='sitem' id='items2_1'>
+                        <ul class='sitemu'>
+                            <li><a href='NewsList.aspx' target='main'>信息资讯列表</a></li>
+                            <li><a href='AddNews.aspx' target='main'>添加系统信息</a></li>
+                            <!-- <li><a href='NewsTypeList.aspx' target='main'>新闻公告类别管理</a></li>-->
+                            <li><a href='NewsSendMessage.aspx' target='main'>资讯评论列表</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <!-- Item 2 End -->
+                <!-- Item 3 Strat -->
+                <dl class='bitem'>
+                    <dt onclick='showHide("items3_1")'>教学视频管理</dt>
+                    <dd style='display: block' class='sitem' id='items3_1'>
+                        <ul class='sitemu'>
+                            <li><a href='AddVideo.aspx' target='main'>添加教学视频</a></li>
+                            <li><a href='VideoManger.aspx' target='main'>教学视频列表</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <!-- Item 3 End -->
+                <!-- Item 4 Strat -->
+                <dl class='bitem'>
+                    <dt onclick='showHide("items4_1")'>多媒体课件管理</dt>
+                    <dd style='display: block' class='sitem' id='items4_1'>
+                        <ul class='sitemu'>
+                            <li><a href='AddFile.aspx' target='main'>添加多媒体课件</a></li>
+                            <li><a href='FileManger.aspx' target='main'>多媒体课件列表</a></li>
+                            <li><a href='FileSendMessage.aspx' target='main'>多媒体课件评论列表</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <!-- Item 4 End -->
+                <!-- Item 5 Strat -->
+                <dl class='bitem'>
+                    <dt onclick='showHide("items5_1")'>教师信息管理</dt>
+                    <dd style='display: block' class='sitem' id='items5_1'>
+                        <ul class='sitemu'>
+                            <li><a href='AddTInfo.aspx' target='main'>添加教师信息</a></li>
+                            <li><a href='TinfoManger.aspx' target='main'>教师信息管理</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <!--     <dl class='bitem'>
+                    <dt onclick='showHide("items5_1")'>练习题管理</dt>
+                    <dd style='display: block' class='sitem' id='items5_1'>
+                        <ul class='sitemu'>
+                            <li><a href='AddZY.aspx' target='main'>添加练习题</a></li>
+                            <li><a href='ZYManger.aspx' target='main'>练习题列表</a></li>
+                            <li><a href='WorkManger.aspx' target='main'>上传习题列表</a></li>
+                        </ul>
+                    </dd>
+                </dl>-->
+                <dl class='bitem'>
+                    <dt onclick='showHide("items6_1")'>注册会员管理</dt>
+                    <dd style='display: block' class='sitem' id='items6_1'>
+                        <ul class='sitemu'>
+                            <li><a href='UserList.aspx' target='main'>会员列表</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <!-- Item 6 End -->
+                <!-- Item7 Strat -->
+                <dl class='bitem'>
+                    <dt onclick='showHide("items7_1")'>评论留言管理</dt>
+                    <dd style='display: block' class='sitem' id='items7_1'>
+                        <ul class='sitemu'>
+                            <li><a href='BBSManger.aspx' target='main'>评论留言列表</a></li>
+                            <li><a href='BBSReplayManger.aspx' target='main'>论坛回复列表</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <!-- Item9 Strat -->
+                <dl class='bitem'>
+                    <dt onclick='showHide("items9_1")'>课程简介</dt>
+                    <dd style='display: block' class='sitem' id='items9_1'>
+                        <ul class='sitemu'>
+                            <li><a href='AboutManger.aspx' target='main'>课程简介</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Src="PgMenu.ascx" TagName="PgMenu" TagPrefix="uc4" %>
+<%@ Register Src="PageTop.ascx" TagName="PageTop" TagPrefix="uc3" %>
+<%@ Register Src="PageDown.ascx" TagName="PageDown" TagPrefix="uc2" %>
+<%@ Register Src="UserLogin.ascx" TagName="UserLogin" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <%=SystemMgr .BLL.Common.GetWebTitle() %>
+    </title>
+    <link href="style/css.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background-image: url(img/bg.jpg); background-repeat:repeat;">
+    <form id="form1" runat="server">
+        <table border="0" align="center" width="980" style="background-color: #ffffff;">
+            <tr>
+                <td>
+                    <uc3:PageTop ID="PageTop1" runat="server" />
+                    <div class="topmenu w_980">
+                        <uc4:PgMenu ID="PgMenu1" runat="server" />
+                    </div>
+                    <div class="w_980">
+                        <div class="w_260 fl">
+                            <div class="t_1">
+                                <div>
+                                    <a href="UserHome.aspx">用户中心</a></div>
+                            </div>
+                            <div class="f_1 pa20 h26 mb10" style="font-size: 14px;">
+                                <uc1:UserLogin ID="UserLogin1" runat="server" />
+                            </div>
+                            <div class="t_1">
+                                <div>
+                                    <a href="LinianshitiList.aspx">多媒体课件&gt;&gt;</a></div>
+                            </div>
+                            <div class="f_2 pa15 mb10">
+                                <ul class="list_2 list_ico_1">
+                                    <asp:DataList ID="DataList2" runat="server" ForeColor="#333333" Width="211px">
+                                        <ItemTemplate>
+                                            <div style="border-bottom: 1px dashed #ccc; line-height: 24px;">
+                                                &nbsp;&nbsp; <a href='<%#Eval("id","FileInfo.aspx?id={0}")%>'>
+                                                    <%#Eval("TitleName").ToString().Length > 15 ? CutChar(Eval("TitleName").ToString(), 15) + "..." : Eval("TitleName")%>
+                                                </a>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                </ul>
+                            </div>
+                            <div class="t_1">
+                                <div>
+                                    <a href="/">最新视频&gt;&gt;</a></div>
+                            </div>
+                            <div class="f_2 pa15">
+                                <ul class="list_2 list_ico_1">
+                                    <asp:DataList ID="DataList1" runat="server" ForeColor="#333333" Width="211px">
+                                        <ItemTemplate>
+                                            <div style="border-bottom: 1px dashed #ccc; line-height: 24px;">
+                                                &nbsp;&nbsp; <a href='<%#Eval("id","ShowVideo.aspx?id={0}")%>'>
+                                                    <%#Eval("VideoName").ToString().Length > 25 ? CutChar(Eval("VideoName").ToString(), 32) + "..." : Eval("VideoName")%>
+                                                </a>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:DataList></ul>
+                            </div>
+                        </div>
+                        <div class="w_b710 fr">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <uc2:PageDown ID="PageDown1" runat="server" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
