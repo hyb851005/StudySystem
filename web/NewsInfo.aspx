@@ -5,6 +5,43 @@
     <input type="hidden" runat="server" id="hf_uid" />
     <input type="hidden" runat="server" id="hf_id" />
     <input type="hidden" runat="server" id="hf_filetype" />
+
+
+      <table width="100%" height="89%" border="0" cellspacing="0" cellpadding="0">		
+		<tr valign="top"> 
+			<td height="100%" colspan="3" bgcolor="#FFFFFF" class="l-r-space">
+				<table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#009DE9">
+					<tr>
+						<td bgcolor="#FFFFFF" height="50" align="center" valign="middle">
+							<asp:Label ID="lbTotalScore" runat="server" Font-Bold="true" ForeColor="Red"></asp:Label>
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF">							
+							<asp:GridView ID="gvQuestion" runat="server" AutoGenerateColumns="False" ShowHeader="False" SkinID="GridViewSkin" DataKeyNames="ID" OnRowDataBound="gvQuestion_RowDataBound" GridLines ="None">
+								<Columns>
+									<asp:TemplateField>
+										<ItemTemplate>
+											<asp:Label ID="lbIndex" runat="server"></asp:Label>．<%# Eval("Title") %><br />
+											<%--<asp:RadioButtonList ID="rblAnswer" runat="server" RepeatDirection="Vertical"></asp:RadioButtonList>--%>
+                                            <asp:CheckBoxList ID="rblAnswer" runat="server" RepeatDirection="Vertical"></asp:CheckBoxList>
+											<hr />
+										</ItemTemplate>
+									</asp:TemplateField>
+								</Columns>
+							</asp:GridView>
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF" align="center" height="50" valign="middle"><asp:ImageButton ID="ibtCommit" runat="server" ImageUrl="~/App_Themes/Default/Images/bcommit.gif" AlternateText="提交" OnClick="ibtCommit_Click" />
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>		
+    </table>
+
+
     <table id="Table1" align="center" border="0" bordercolordark="#ffffff" bordercolorlight="#ffcf00"
         cellpadding="0" cellspacing="0" style="width: 100%">
         <tbody>
@@ -21,6 +58,7 @@
                     <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
             </tr>
+
             <tr>
                 <td colspan="1" style="width: 921px; height: auto; text-align: left">
                      
@@ -49,8 +87,8 @@
                             </td>
                             <td>
                                 <asp:Button ID="Button3" runat="server" Text="立即留言" Height="53px" Width="60px" OnClick="Button3_Click" /><br />
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="请输入"
-                                    ControlToValidate="txtContent"></asp:RequiredFieldValidator>
+                                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="请输入"
+                                    ControlToValidate="txtContent"></asp:RequiredFieldValidator>--%>
                             </td>
                         </tr>
                     </table>
@@ -101,4 +139,5 @@
         </tr>
         </tbody>
     </table>
+
 </asp:Content>

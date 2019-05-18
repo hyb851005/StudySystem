@@ -20,7 +20,9 @@ public partial class XiList : System.Web.UI.Page
     }
     private void gvbind()
     {
-        string sql = "select * from News  where TypeName='课程习题' " + (txtkey.Text.Trim() == "" ? "" : " and [name] like '%" + txtkey.Text.Trim() + "%'") + "  order by addtime desc";
+        //string sql = "select * from News  where TypeName='课程习题' " + (txtkey.Text.Trim() == "" ? "" : " and [name] like '%" + txtkey.Text.Trim() + "%'") + "  order by addtime desc";
+        //string sql = "select * from Subject" + (txtkey.Text.Trim() == "" ? "" : " and [name] like '%" + txtkey.Text.Trim() + "%'");
+        string sql = "select * from Subject where Name like '%" + txtkey.Text.Trim() + "%'";
         SqlConnection con = SystemMgr.BLL.Common.getConnection();
         con.Open();
         SqlDataAdapter sda = new SqlDataAdapter(sql, con);
@@ -62,7 +64,6 @@ public partial class XiList : System.Web.UI.Page
         if (!objPds.IsLastPage)
         {
             hylastpage.NavigateUrl = Request.CurrentExecutionFilePath + "?Page=" + objPds.PageCount;
-
             lnkNext.NavigateUrl = Request.CurrentExecutionFilePath + "?Page=" + Convert.ToString(CurPage + 1);
         }
 

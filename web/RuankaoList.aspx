@@ -35,9 +35,9 @@
                                         </li>
                                 </td>
                                 <td align="center" height="30" style="border-bottom:1px dashed #FF9966; width:120px; text-align:center;">
-                                        <asp:Label ID="Label2" runat="server" Height="20px" Text='<%# DataBinder.Eval(Container, "DataItem.Addtime") %>'
+<%--                                        <asp:Label ID="Label2" runat="server" Height="20px" Text='<%# DataBinder.Eval(Container, "DataItem.Addtime") %>'
                                  
-                                            Width="193px"></asp:Label>
+                                            Width="193px"></asp:Label>--%>
                                 </td>
                             </tr>
                         </table>

@@ -1,0 +1,303 @@
+﻿body 
+{
+	font-family: "Tahoma";
+	font-size:9pt;
+	/*  设置滚动条的颜色     */ 
+    scrollbar-3dlight-color:#e8f4ff;
+    scrollbar-arrow-color:#daeeee;
+    scrollbar-darkshadow-color:#e8f4ff;
+    scrollbar-base-color:#e8f4ff;  	
+    /* margin-top:0; */
+}
+
+.Text
+{
+	font:Tahoma;
+	font-size:9pt;
+}
+
+.RadioList
+{
+	font:Tahoma;
+	font-size:9pt;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.Table
+{
+	width:100%;
+	font-size: 9pt;
+	border:0;
+	font-family: Tahoma;
+}
+
+.TableTitle
+{
+	width: 100%;
+	border-collapse: collapse;
+	font-family: Tahoma;
+	font-size: 9pt;
+	font-weight: bold;
+	color:Blue;
+}	
+
+.LeftTD
+{
+	border-width:1;	
+	height:30;
+	border-collapse:collapse;
+	font-family: Tahoma;
+}
+
+.RightTD
+{
+	border:1;
+	border-width:1;
+	border-left-color:#184073;
+	margin-left:10;
+	height:30;
+	border-collapse:collapse;
+	font-family: Tahoma;
+}
+
+.Button
+{
+    font-family: "Tahoma";
+    font-size: 9pt; color: #003399;
+    border: 1px #003399 solid;color:#006699;
+    BORDER-BOTTOM: #93bee2 1px solid; 
+    BORDER-LEFT: #93bee2 1px solid; 
+    BORDER-RIGHT: #93bee2 1px solid; 
+    BORDER-TOP: #93bee2 1px solid;
+    background-image:url(../Images/c_annu.gif);
+    background-color: #e8f4ff;
+    CURSOR: hand;
+    font-style: normal;
+}
+
+.TextBox
+{
+	font-family: "Tahoma";
+	font-size:9pt;
+	/*  设置滚动条的颜色  */    
+    scrollbar-3dlight-color:#e8f4ff;
+    scrollbar-arrow-color:#daeeee;
+    scrollbar-darkshadow-color:#e8f4ff;
+    scrollbar-base-color:#e8f4ff;  
+}
+
+.ButtonFont {
+	font-family: "宋体";
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.ListBox
+{
+	font-family: "Tahoma";
+	font-size:9pt;	
+	scrollbar-3dlight-color:#e8f4ff;
+    scrollbar-arrow-color:#daeeee;
+    scrollbar-darkshadow-color:#e8f4ff;
+    scrollbar-base-color:#e8f4ff;  	 
+}
+
+.ButtonFont {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+
+.ModuleTitle
+{
+	font:Tahoma;
+	font-size:10pt;
+}
+
+.annu-font {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.i-font1 {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #343A78;
+}
+.i-font2 {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+}
+.l-l-font1 {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: #343a78;
+}
+.l-l-font2 {
+	font-family: "宋体";
+	font-size: 13px;
+	line-height: 25px;
+	color: #000000;
+}
+.l-r-space {
+	padding: 12px;
+}
+.l-r-lm {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.l-r-font1 {
+	font-family: "宋体";
+	font-size: 13px;
+	font-weight: bold;
+	color: #0361D4;
+}
+.l-r-font2 {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+}
+.l-r-font3 {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.12-hei
+{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+}
+.12-hui
+{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #494949;
+}
+.12-lan-songti
+{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #006CC3;
+	text-decoration: none;
+	line-height: 20px;
+
+}
+.12-lan-b-songti
+{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #006CC3;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+.13-hei-b-st
+{
+	font-family: "宋体";
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+}
+
+
+A
+{
+	font-size: 9pt;
+	color: #006699;
+	text-decoration: none;
+}
+A:ACTIVE
+{
+	color: red;
+	text-decoration: none;
+}
+A:FOCUS
+{
+	color: red;
+	text-decoration: none;
+}
+A:HOVER
+{
+	color: red;
+	text-decoration: underline;
+}
+A:LINK
+{	
+	text-decoration: none;
+}
+
+a.click-1:link
+{
+	color:#494949;
+	text-decoration: none;
+}
+a.click-1:visited
+{
+	color:#cccccc;
+	/*color:#494949;*/
+	text-decoration: none;
+}
+a.click-1:hover
+{
+	color:#000000
+}
+a.click-1:active
+{
+	color:#000000
+}
+a.click-2:link
+{
+	color:#006CC3;
+	text-decoration: none;
+}
+a.click-2:visited
+{
+	/*color:#006CC3;*/
+	color:#cccccc;
+	text-decoration: none;
+}
+a.click-2:hover
+{
+	color:#cccccc
+}
+a.click-2:active
+{
+	color:#cccccc
+}
+a:link
+{
+	font-family: "宋体";
+	font-size: 9pt;/*12px; */
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	font-family: "宋体";
+	font-size: 9pt;/*12px; */
+	color: #0066CC;
+	text-decoration: none;
+}
+
+
+
+hr
+{
+	width:98%;	
+	color:#006CC3;
+}
+
+	
+	
+
