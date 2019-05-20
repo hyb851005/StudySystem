@@ -234,6 +234,7 @@ public partial class NewsInfo : System.Web.UI.Page
         //db.SubmitChanges();
         ///显示考试成绩
         lbTotalScore.Text = "提交完成，本次测试成绩为：" + totalScore.ToString() + "分";
+        //Response.Redirect("~/testCam.html");
     }
 
 

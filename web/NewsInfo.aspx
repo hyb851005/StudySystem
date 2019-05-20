@@ -6,6 +6,52 @@
     <input type="hidden" runat="server" id="hf_id" />
     <input type="hidden" runat="server" id="hf_filetype" />
 
+    <%--///摄像头测试--%>
+    <div style="width:100%;height:200px">
+        <div style="float:left;margin-left:133px;margin-top:10px;border:2px solid #ff9900">
+            <video id="video" width="150px" height="150px" autoplay="autoplay"></video><br />
+        </div>
+        <span style="float:left;margin-top:140px;margin-left:40px;"><input type="button" id="snap" title="拍照" value="拍照" onclick="takePhoto()" /></span>
+        <div style="float:left;margin-left:40px;margin-top:10px;border:2px solid #ff9900">
+            <canvas id="canvas" width="150px" height="150px"></canvas><br />
+            <%--<button id="snap" onclick="takePhoto()">拍照</button>--%>
+        </div>
+        <div style="clear:both"></div>
+        <span style="float:left;margin-left:193px;margin-top:5px;font-weight:bold">摄像头</span>
+        <span style="float:left;margin-left:233px;margin-top:5px;font-weight:bold">照片</span>
+    </div>
+
+        <script>
+            window.onload=function getMedia() {
+                let constraints = {
+                    video: { width: 150, height: 150 },
+                    audio: true
+                };
+                //获得video摄像头区域
+                let video = document.getElementById("video");
+                //这里介绍新的方法，返回一个 Promise对象
+                // 这个Promise对象返回成功后的回调函数带一个 MediaStream 对象作为其参数
+                // then()是Promise对象里的方法
+                // then()方法是异步执行，当then()前的方法执行完后再执行then()内部的程序
+                // 避免数据没有获取到
+                let promise = navigator.mediaDevices.getUserMedia(constraints);
+                promise.then(function (MediaStream) {
+                    video.srcObject = MediaStream;
+                    video.play();
+                });
+            }
+
+            function takePhoto() {
+                //获得Canvas对象
+                let video = document.getElementById("video");
+                let canvas = document.getElementById("canvas");
+                let ctx = canvas.getContext('2d');
+                ctx.drawImage(video, 0, 0, 150, 150);
+            }
+        </script>
+   <%-- ///摄像头测试结束--%>
+
+
 
       <table width="100%" height="89%" border="0" cellspacing="0" cellpadding="0">		
 		<tr valign="top"> 
